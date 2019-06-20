@@ -1,0 +1,28 @@
+@media only screen and (min-width: 560px) {
+	.node .field--type-image {
+	    float: left;
+	    margin: 0 1em 0 0;
+	    width: 35%;
+	}
+	.field--name-field-test-job-text {
+		display: inline-block;
+		width: 62%;
+	}
+}
+
+
+.field--name-field-test-job-text .giphy-first-content {
+	background: url("/sites/default/files/PRIDE-BANNER.gif");
+	padding: 18px;
+	font-size: 27px;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, .6);
+}
+
+
+.formatted-value-area h1 {
+	font-size: 30PX;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+}

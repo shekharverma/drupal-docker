@@ -1,0 +1,40 @@
+version: '2'
+
+services:
+  drupal:
+    image: drupal:latest 
+    container_name: drupal1
+    ports:
+      - 80:80
+    volumes:
+      - ./html:/var/www/html/
+#      - ./drupal_modules1:/var/www/html/modules
+#      - ./drupal_profiles1:/var/www/html/profiles
+#      - ./drupal_themes1:/var/www/html/themes
+#      - ./drupal_sites1:/var/www/html/sites
+    links:
+      - mysql:db
+    restart: always
+
+  mysql:
+    image: mysql:5.7
+    container_name: drupal-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+    volumes:
+        - ./db_data:/var/lib/mysql/
+    ports:
+      - 3306:3306
+    restart: always
+    # THIS BIT!!!1!
+    #    user: ${CURRENT_UID}
+volumes:
+        #  drupal_modules:
+        #  drupal_profiles:
+        #  drupal_themes:
+        #  drupal_sites:
+  html:
+  db_data:

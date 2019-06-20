@@ -1,0 +1,10 @@
+name: Test Job
+type: module
+description: Say Test Job
+package: Custom
+core: 8.x
+libraries: 
+  # The following libraries are added globally
+  - test_job 
+dependencies:
+  - field 

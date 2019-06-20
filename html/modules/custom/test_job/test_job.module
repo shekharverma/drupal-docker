@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Defines simple text field formatter.
+ */
+
+
+ /**
+ * Implements hook_theme().
+ */
+function test_job_theme() {
+  return array(
+    'simple_text_field_formatter' => array(   
+      'variables' => array('val' => NULL),
+      'template' => 'simple-text-field-formatter',
+    ),
+  );
+}  
+ 
+
+/**
+ * Implements hook_page_attachments().
+ */
+function test_job_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'test_job/test_job';
+}
+
+
+?>

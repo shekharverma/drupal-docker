@@ -1,0 +1,6 @@
+hello_world:
+    path: /test/job
+    defaults:
+        _controller: Drupal\test_job\Controller\TestJobController::Test
+    requirements:
+        _permission: 'access content' 

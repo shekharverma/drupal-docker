@@ -1,0 +1,5 @@
+test_job:
+  version: 1.x
+  css:  
+    theme:
+      css/test_job.css: {}
